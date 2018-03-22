@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product Changed",
+      "cost": "10.99",
+      "quantity": "100",
+      "locationId": 1,
+      "familyId": 1
+    },
+    {
+      "name": "New Product",
+      "cost": "33.99",
+      "quantity": "300",
+      "id": 2
+    },
+    {
+      "name": "This Product is won't Removed",
+      "cost": "234",
+      "quantity": "232",
+      "id": 3
+    },
+    {
+      "name": "New other product",
+      "cost": "342",
+      "quantity": "23432",
+      "id": 4
+    },
+    {
+      "name": "Mundial Palmeiras",
+      "cost": "9923942349.99",
+      "quantity": "0",
+      "id": 5
+    },
+    {
+      "name": "New Product from Android",
+      "cost": "99.99",
+      "quantity": "100",
+      "id": 6
+    }
+  ]
+}

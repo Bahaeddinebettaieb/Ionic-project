@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Json-Server Crud Example
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button full icon-right (click)="createProduct()"> 
+    New Product
+    <ion-icon name="create"></ion-icon>
+  </button>
+
+  <ion-list>
+    <ion-list-header>Products</ion-list-header>
+    <ion-item *ngFor="let product of productsObservable | async" detail-push (click)="navToDetail(product)" >
+      <h2>{{product.name}}</h2>
+      <!-- <p>{{product.cost | currency : 'BRL' :'symbol': '1.2-2': 'pt-BR' }}</p> -->
+      <p>{{product.cost | currency : 'BRL' }}</p>
+      
+    </ion-item>
+  </ion-list>
 </ion-content>
