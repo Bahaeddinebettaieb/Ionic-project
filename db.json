@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Product Changed",
+      "name": "First Product Changed",
       "cost": "10.99",
       "quantity": "100",
       "locationId": 1,
@@ -21,7 +21,7 @@
       "id": 3
     },
     {
-      "name": "New other product",
+      "name": "Other new product",
       "cost": "342",
       "quantity": "23432",
       "id": 4
