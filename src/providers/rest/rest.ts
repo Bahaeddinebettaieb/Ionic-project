@@ -42,7 +42,7 @@ export class RestProvider {
           return new Product(p);
         }).catch((err)=>{
           console.error(err);
-          return {};
+          return [];
         })
   }
 
@@ -52,7 +52,7 @@ export class RestProvider {
         return new Product(resp);
       }).catch((err)=>{
         console.error(err);   
-        return {}     
+        return [];     
       })
   }
 
@@ -62,7 +62,7 @@ export class RestProvider {
         return new Product(resp)
       }).catch((err)=>{
         console.error(err);
-        return {}
+        return []
       })
   }
 
