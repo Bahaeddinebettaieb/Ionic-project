@@ -13,8 +13,8 @@
   </button>
 
   <ion-list>
-    <ion-list-header>Products</ion-list-header>
-    <ion-item *ngFor="let product of productsObservable | async" detail-push (click)="navToDetail(product)" >
+    <ion-list-header>Products sorted by name</ion-list-header>
+    <ion-item *ngFor="let product of productsObservable | async | orderBy:'name'" detail-push (click)="navToDetail(product)" >
       <h2>{{product.name}}</h2>
       <!-- <p>{{product.cost | currency : 'BRL' :'symbol': '1.2-2': 'pt-BR' }}</p> -->
       <p>{{product.cost | currency : 'BRL' }}</p>

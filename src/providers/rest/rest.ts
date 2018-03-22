@@ -1,7 +1,7 @@
 import { Product } from './../../model/product';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs'
 import 'rxjs/add/operator/catch'
 import 'rxjs/add/operator/map'
 
@@ -22,7 +22,7 @@ export class RestProvider {
           return  products.map(product=>{ return new Product(product)});
         }).catch((err)=>{
           console.error(err)
-          return [];
+          return Observable.empty<Product[]>();
         });
   }
 
@@ -32,7 +32,7 @@ export class RestProvider {
           return new Product(response)
         }).catch((err)=>{
           console.error(err);
-          return [];
+          return Observable.empty<Product>();
         })
   }
 
@@ -42,7 +42,7 @@ export class RestProvider {
           return new Product(p);
         }).catch((err)=>{
           console.error(err);
-          return [];
+          return Observable.throw(err.message)
         })
   }
 
@@ -52,7 +52,7 @@ export class RestProvider {
         return new Product(resp);
       }).catch((err)=>{
         console.error(err);   
-        return [];     
+        return Observable.empty<Product>();
       })
   }
 
@@ -62,7 +62,7 @@ export class RestProvider {
         return new Product(resp)
       }).catch((err)=>{
         console.error(err);
-        return []
+        return Observable.empty<Product>();
       })
   }
 

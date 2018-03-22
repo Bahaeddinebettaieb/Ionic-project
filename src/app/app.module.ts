@@ -1,3 +1,4 @@
+import { Ng2OrderModule } from 'ng2-order-pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule , LOCALE_ID} from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -24,6 +25,7 @@ registerLocaleData(ptBr)
   imports: [
     BrowserModule,
     HttpClientModule,
+    Ng2OrderModule,
     FormsModule,
     IonicModule.forRoot(MyApp)
   ],
